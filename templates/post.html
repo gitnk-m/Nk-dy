@@ -1,0 +1,38 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<br>
+<h1>DETAILS FROM FORM</h1>
+
+
+<table class="table table-striped">
+	<tr>
+		<th>S.No.</th>
+		<th>Name</th>
+		<th>Email</th>
+		<th>One</th>
+		<th>Two</th>
+		<th>Three</th>
+		<th>Four</th>
+	</tr>
+	{% for item in data %}
+	<tr>
+		{% for i in  item %}
+			<td>{{i}}</td>
+		{% endfor %}
+	</tr>
+	{%endfor%}
+</table>
+
+{% endblock %}
+	
+
+
+
+<!--<p>{{item.user_id}}.
+	{{item.name}}, 
+	{{item.email}}, 
+	{{item.one}}, 
+	{{item.two}}, 
+	{{item.three}}, 
+	{{item.foru}}</p><br>-->
